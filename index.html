@@ -5,14 +5,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To do list</title>
     <link rel="stylesheet" href="./style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-      integrity="sha512-z3gUgBZS76C1Rf9RkLhHhVe/spR/3UjzGrbdp1W5MoCUzJ6m4HvAMX010wb3oXrZvJvylFgTaNN/62gXmTIMt+DtHNj0iUICwC/kbM/kz0Oka/ZD4trjYXLionx/p6qfL5hEhJaaetggRNm2MqTB+ABhw4NJZwHlTF6/Rg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
   </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-color: rgb(0, 136, 170);
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .container {
+      background-color: white;
+      border-radius: 10px;
+    }
+    h1 {
+      font-size: 18px;
+      text-align: center;
+      padding: 20px;
+    }
+    #inp {
+      border: none;
+      border-radius: 50px;
+      background-color: rgb(210, 210, 210);
+      color: gray;
+      padding: 0.6rem 0.5rem;
+      font-size: 18px;
+      padding-left: 15px;
+      padding-right: 62px;
+      margin-left: 35px;
+    }
+    #add {
+      color: black;
+      border: none;
+      background-color: rgb(12, 206, 12);
+      padding: 2.5px 12px;
+      font-size: 30px;
+      position: absolute;
+      margin-left: -33px;
+      border-radius: 190%;
+    }
+    #add:hover {
+      color: black;
+      border: none;
+      background-color: rgb(106, 232, 106);
+      padding: 2.5px 12px;
+      font-size: 30px;
+      position: absolute;
+      margin-left: -33px;
+      border-radius: 190%;
+    }
+    #list {
+      border-radius: 6px;
+      padding-top: 10px;
+      padding-left: 12px;
+      padding-bottom: 10px;
+      background-color: rgb(210, 210, 210);
+      margin: 10px 34px;
+    }
+    #del {
+      border: none;
+      background: transparent;
+      margin-right: 7px;
+    }
+    #list {
+      display: flex;
+      justify-content: right;
+      justify-content: space-between;
+    }
+    h4 {
+      display: flex;
+    }
+    #del {
+      display: flex;
+    }
+  </style>
   <body>
     <div class="container">
       <div class="head">
@@ -23,8 +93,15 @@
           +
         </button>
         <div class="main">
-          <p id="show" style="color: green; font-weight: bolder"></p>
-          <div id="list">something <button id="del">🗑️</button></div>
+          <p
+            id="show"
+            style="
+              color: green;
+              font-weight: bolder;
+              text-align: center;
+              padding-top: 5px;
+            "
+          ></p>
         </div>
       </div>
     </div>
