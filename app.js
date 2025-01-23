@@ -19,7 +19,7 @@ ad.addEventListener("click", () => {
     oldDiv.appendChild(newDiv);
     newDiv.appendChild(txt);
     newDiv.appendChild(txt2);
-    document.querySelector(`#h${n}`).textContent = inputVal.value;
+    document.querySelector(`#h${n}`).textContent = "🔻" + inputVal.value;
     document.querySelector(`#b${b}`).innerHTML = "🗑️";
     document.querySelector(`#b${b}`).style.background = "transparent";
     document.querySelector(`#b${b}`).style.fontWeight = "light";
@@ -32,6 +32,5 @@ ad.addEventListener("click", () => {
     document.querySelector("#show").innerHTML = "Invalid input value!!";
     document.querySelector("#show").style.color = "red";
   }
-
   m++;
 });
