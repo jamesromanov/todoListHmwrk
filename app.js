@@ -3,12 +3,14 @@ let ad = document.getElementById("add");
 n = 0;
 b = 0;
 m = 0;
+tasks = [];
 ad.addEventListener("click", () => {
   b++;
   n++;
+
   if (inputVal.value !== "") {
-    let oldDiv = document.querySelector(".main");
-    let newDiv = document.createElement("div");
+    oldDiv = document.querySelector(".main");
+    newDiv = document.createElement("div");
     newDiv.setAttribute("id", `d${m}`);
     let txt = document.createElement("h4");
     txt.setAttribute("id", `h${n}`);
@@ -27,10 +29,11 @@ ad.addEventListener("click", () => {
     document.querySelector(`#b${b}`).style.marginRight = "7px";
   }
   if (inputVal.value !== "") {
-    document.querySelector("#show").style.color = "green";
+    inputVal.value = "";
   } else {
     document.querySelector("#show").innerHTML = "Invalid input value!!";
     document.querySelector("#show").style.color = "red";
   }
+
   m++;
 });
